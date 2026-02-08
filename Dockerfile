@@ -1,11 +1,10 @@
-
 FROM node:20-alpine AS build
 WORKDIR /frontend
-COPY frontend/package.json ./   # package-lock.json optional entfernen
+COPY frontend/package.json ./ 
+COPY frontend/package-lock.json ./   # jetzt vorhanden
 RUN npm install
 COPY frontend/ ./
 RUN npm run build
-
 
 FROM ghcr.io/home-assistant/amd64-base:latest
 WORKDIR /app
