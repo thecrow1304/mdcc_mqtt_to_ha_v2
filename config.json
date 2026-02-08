@@ -1,7 +1,7 @@
 
 {
   "name": "MQTT Dynamic Entities",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "slug": "mqtt_dynamic_entities",
   "description": "Creates Home Assistant devices and entities dynamically from MQTT payloads",
   "startup": "services",
