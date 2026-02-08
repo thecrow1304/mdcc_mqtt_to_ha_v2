@@ -1,0 +1,29 @@
+
+{
+  "name": "MQTT Dynamic Entities",
+  "version": "1.0.0",
+  "slug": "mqtt_dynamic_entities",
+  "description": "Creates Home Assistant devices and entities dynamically from MQTT payloads",
+  "startup": "services",
+  "boot": "auto",
+  "arch": ["amd64", "aarch64"],
+  "ports": {
+    "8099/tcp": 8099
+  },
+  "options": {
+    "mqtt_host": "core-mosquitto",
+    "mqtt_port": 1883,
+    "mqtt_user": "",
+    "mqtt_password": "",
+    "base_topic": "physec/#",
+    "ha_discovery_prefix": "homeassistant"
+  },
+  "schema": {
+    "mqtt_host": "str",
+    "mqtt_port": "int",
+    "mqtt_user": "str?",
+    "mqtt_password": "str?",
+    "base_topic": "str",
+    "ha_discovery_prefix": "str"
+  }
+}
